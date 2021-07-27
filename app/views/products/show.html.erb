@@ -1,3 +1,9 @@
+<% if @product.picture.attached? %>
+    <%= image_tag @product.picture, class: "card-img top thumbnail" %>
+<% else %>
+    <%= image_tag "knee-support.jpeg", alt: "knee-support", class: "card-img top thumbnail" %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>

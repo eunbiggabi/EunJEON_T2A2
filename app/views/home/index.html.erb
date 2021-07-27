@@ -35,7 +35,8 @@
             <% @products.each do |product| %>
             <div class="card" style="width: 18rem;">
                 <a href="/products/<%= product[:id] %>">
-                <img class="card-img" src="images/hand-massager.jpeg" alt="Hand Massager Image">
+                <%= image_tag product.picture, class: "card-img" %>
+                <%# <img class="card-img" src=""> %>
                 <div class="card-body">
                 <h5 class="card-title"><%= product.name %></h5>
                 <p class="card-text">from <%= product.discount_price %></p>
@@ -48,3 +49,4 @@
         </div>
     </div>
 </section>
+
