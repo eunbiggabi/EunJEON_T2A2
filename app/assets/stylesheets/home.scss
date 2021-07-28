@@ -79,7 +79,18 @@ ul {
     .navbar__icons {
       display: flex;
       align-items: center;
-      margin: 0 34px 0 0;
+      margin: 0;
+      
+      
+
+      ul {
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+          display: block;
+          display: flex;
+        }
+      }
 
       .navbar__icon {
         img {
@@ -106,14 +117,13 @@ ul {
         top: 36px;
         right: 30px;
         font-size: 20px;
+        display: none;
       }
     }
   }
 }
 
 #home {
-  padding-top: 90px;
-
   .home__container {
     color: rgba(255, 255, 255, 0.9);
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
