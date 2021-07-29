@@ -36,10 +36,13 @@
     <%= form.number_field :user_id %>
   </div>
 
+
   <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
+    <%= form.label :category_id, class: "form-label mr-1" %>
+    <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
   </div>
+
+  <%# ////////////// %>
 
   <div class="field">
     <%= form.label :inventory_id %>

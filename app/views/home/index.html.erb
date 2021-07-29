@@ -35,8 +35,11 @@
             <% @products.each do |product| %>
             <div class="card" style="width: 18rem;">
                 <a href="/products/<%= product[:id] %>">
-                <%= image_tag product.picture, class: "card-img" %>
-                <%# <img class="card-img" src=""> %>
+                <% if product.picture.attached? %>
+                    <%= image_tag product.picture, class: "card-img" %>
+                <% else %>
+                    <%= image_tag "not_ready.png", alt: "not_ready", class: "card-img" %>
+                <% end %>
                 <div class="card-body">
                 <h5 class="card-title"><%= product.name %></h5>
                 <p class="card-text">from <%= product.discount_price %></p>
