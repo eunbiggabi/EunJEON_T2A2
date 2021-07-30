@@ -1,3 +1,40 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>VIEW ALL COLLECTIONS</h1>
+
+  <div class="card__container">
+  
+    <% @products.each do |product| %>
+      <div class="card" style="width: 18rem;">
+        <% if product.picture.attached? %>
+            <%= image_tag product.picture, class: "card-img" %>
+        <% else %>
+            <%= image_tag "not_ready.png", alt: "not_ready", class: "card-img" %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %></h5>
+          <p class="card-text">from <%= product.discount_price %></p>
+          <p class="card-text-cross"><%= product.original_price %></p>
+          <p class="card-text-icon">SALE</p>
+        </div>
+        <div class="card-manage">
+          <%= link_to 'Show', product, class: "card-link" %>
+          <%= link_to 'Edit', edit_product_path(product), class: "card-link" %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <%= link_to 'New Product', new_product_path %>
+</div>
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
