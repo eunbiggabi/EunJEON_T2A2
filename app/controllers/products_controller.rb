@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
-
+    @product.user = current_user
+    
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: "Product was successfully created." }
@@ -66,6 +67,7 @@ class ProductsController < ApplicationController
 
     def setup_form
       @categories = Category.all
+      # @inventories = Product.inventories.quantity
     end
 
     # Only allow a list of trusted parameters through.
