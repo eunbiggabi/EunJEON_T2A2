@@ -21,8 +21,10 @@
         </div>
         <div class="card-manage">
           <%= link_to 'Show', product, class: "card-link" %>
-          <%= link_to 'Edit', edit_product_path(product), class: "card-link" %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-link" %>
+          <% if current_user.admin? %>
+            <%= link_to 'Edit', edit_product_path(product), class: "card-link" %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-link" %>
+          <% end %>
         </div>
       </div>
     <% end %>

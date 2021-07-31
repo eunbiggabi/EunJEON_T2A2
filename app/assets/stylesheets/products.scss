@@ -7,7 +7,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .container {
-  padding-top: 140px;
+  padding-top: 10px;
 
   .card__container {
     display: flex;
@@ -73,4 +73,8 @@ h1 {
 
 .card-body {
   border-bottom: 1px solid #808080;
+}
+
+h2 {
+    margin-top: 60px;
 }
