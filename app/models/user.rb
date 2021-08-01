@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
         has_many :products
+        has_one :order_detail
+        belongs_to :cart
+
         before_save { self.email = email.downcase }
           
     # validates :username, presence: true, 

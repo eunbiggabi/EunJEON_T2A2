@@ -2,14 +2,14 @@
     <div class="header__container">
         <nav class="navbar">
             <div class="navbar__logo">
-                <a href=""><img src="images/logo.png" alt="bodyhelper-logo" class="navber__logo__img"></a>
+                <a href="/"><img src="images/logo.png" alt="bodyhelper-logo" class="navber__logo__img"></a>
             </div>
 
             <div id="menu" class="navbar__menu">
                 <ul class="navbar__menu">
-                    <li class="navbar__menu__item active" data-link="#home">Home</li>
+                    <a href="/"><li class="navbar__menu__item active" data-link="#home">Home</li></a>
                     <%# <li class="navbar__menu__item" data-link="#about">About</li> %>
-                    <li class="navbar__menu__item" data-link="#skills">Collection</li>
+                    <a href="/products"><li class="navbar__menu__item" data-link="#skills">Collection</li></a>
                 </ul>
             </div>
 
@@ -32,7 +32,7 @@
                     </li>
 
                     <%# <a href="users/sign_in"><li class="navbar__icon u"><button><img src="images/user.png" alt="user-image"></button></li></a> %>
-                    <a href="cart.html.erb"><li class="navbar__icon s"><button><img src="images/shopping-cart.png" alt="shopping-cart-image"></button></li></a>
+                    <a href="carts"><li class="navbar__icon s"><button><img src="images/shopping-cart.png" alt="shopping-cart-image"></button></li></a>
                     
                 </ul>
             </div>

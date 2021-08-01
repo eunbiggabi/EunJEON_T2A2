@@ -3,6 +3,8 @@ class Product < ApplicationRecord
     has_one_attached :picture
     belongs_to :category
     belongs_to :user
+    belongs_to :order
+    belongs_to :cart
     # belongs_to :inventory
     
     # validates :name, presence: true, 

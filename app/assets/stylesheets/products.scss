@@ -76,5 +76,32 @@ h1 {
 }
 
 h2 {
-    margin-top: 60px;
+  margin-top: 60px;
+}
+
+.show__box {
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+
+  .show__container {
+    margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    .card-img {
+      width: 100%;
+
+      @media only screen and (min-width: 768px) {
+        margin: 10px;
+        width: 300px;
+      }
+    }
+  }
+}
+
+.name {
+    margin-top: 20px;
 }
