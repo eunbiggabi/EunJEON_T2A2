@@ -1,0 +1,55 @@
+<section id="home">
+    <div class="home__container">
+        <h1 class="home__title">Body Helper</h1>
+        <p class="home__description">Get back to what you love</p>
+        <a href="/products">
+            <button class="home__contact" data-link="#contact">SHOP NOW</button>
+        </a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="about__container">
+        <div class="feature__container">
+            <img src="/images/about.jpeg" alt="about-image">
+        </div>
+        <div class="text__container">
+            <h2>We're On A Mission</h2>
+            <p>We want to help over 10,000 people back to healthy life and future through providing our effective and functional products</p>
+        </div>
+    </div>
+</section>
+
+<section id="sale">
+    <div class="sale__container">
+        <h1 class="sale__title">Up To 40% OFF</h1>
+        <p class="sale__description">SELECT PRODUCT</p>
+        <p class="sale__description">& FREE SHIPING</p>
+    </div>
+</section>
+
+<section id="collection">
+    <div class="container">
+        <h1>VIEW ALL COLLECTIONS</h1>
+        <div class="card__container">
+            <% @products.each do |product| %>
+            <div class="card" style="width: 18rem;">
+                <a href="/products/<%= product[:id] %>">
+                <% if product.picture.attached? %>
+                    <%= image_tag product.picture, class: "card-img" %>
+                <% else %>
+                    <%= image_tag "not_ready.png", alt: "not_ready", class: "card-img" %>
+                <% end %>
+                <div class="card-body">
+                <h5 class="card-title"><%= product.name %></h5>
+                <p class="card-text">from <%= product.discount_price %></p>
+                <p class="card-text-cross"><%= product.original_price %></p>
+                <p class="card-text-icon">SALE</p>
+                </div>
+                </a>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>
+

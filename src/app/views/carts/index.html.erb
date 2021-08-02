@@ -1,0 +1,14 @@
+<div class="cart__container">
+    <% if user_signed_in? %>
+        <h1>Carts</h1>
+        <%= link_to "Continue shopping", products_path, :class => 'cart-link'  %>
+    <% else %>
+        <h1>Carts</h1>
+        <p>You need to login first.</p>
+        <%= link_to "Go to LogIn", new_user_session_path, :class => 'cart-link'  %>
+    <% end %>
+
+    
+</div>
+
+

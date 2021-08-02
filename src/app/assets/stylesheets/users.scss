@@ -1,0 +1,174 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.form__box {
+  width: 100%;
+  border-top: 1px solid #efefef;
+}
+
+.new_user {
+  width: 310px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.edit_user {
+  width: 310px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 0;
+}
+
+.input__text {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.input__box {
+  width: 310px;
+  height: 40px;
+  font-size: 18px;
+  text-indent: 10px;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.btn__submit {
+    margin: 20px 0;
+    width: 310px;
+    height: 46px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: #3a3a3a;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.btn__submit:hover {
+    background-color: #808080;
+    color: white;
+}
+
+.link__box {
+    width: 100%;
+
+    .link__container {
+        width: 310px;
+        margin: 0 auto;
+
+        @media only screen and (min-width: 768px) {
+            width: 700px;
+        }
+    }
+}
+
+//     .btn__container {
+//       display: flex;
+//       flex-direction: column;
+//       .btn__form {
+//         margin: 20px 0;
+//         width: 310px;
+//         height: 40px;
+//         border: 2px solid #ffffff;
+//         color: #ffffff;
+//         background-color: #3a3a3a;
+
+//         @media only screen and (min-width: 768px) {
+//           width: 700px;
+//         }
+//       }
+
+//       .btn__form:hover {
+//         background-color: #808080;
+//         color: white;
+//         cursor: pointer;
+//       }
+
+// .form__box {
+//   width: 100%;
+//   border-top: 1px solid #efefef;
+//   text-align: center;
+
+//   .form__container {
+//     width: 310px;
+//     margin: 0 auto;
+//     padding-top: 55px;
+
+//     @media only screen and (min-width: 768px) {
+//       width: 700px;
+//     }
+
+// label {
+//     font-size: 18px;
+//     display: block;
+//     margin: 8px 0;
+// }
+
+// input {
+//   text-indent: 10px;
+// }
+
+// input[type="text"],
+// input[type="date"],
+// input[type="email"],
+// input[type="password"] {
+//     width: 310px;
+//     height: 40px;
+//     font-size: 18px;
+
+//     @media only screen and (min-width: 768px) {
+//     width: 700px;
+//     }
+// }
+
+//     .btn__container {
+//       display: flex;
+//       flex-direction: column;
+//       .btn__form {
+//         margin: 20px 0;
+//         width: 310px;
+//         height: 40px;
+//         border: 2px solid #ffffff;
+//         color: #ffffff;
+//         background-color: #3a3a3a;
+
+//         @media only screen and (min-width: 768px) {
+//           width: 700px;
+//         }
+//       }
+
+//       .btn__form:hover {
+//         background-color: #808080;
+//         color: white;
+//         cursor: pointer;
+//       }
+
+//       a {
+//         text-align: center;
+//         font-size: 18px;
+//         color: #3a3a3a;
+//         text-decoration: none;
+//       }
+
+//       a:hover {
+//         color: #606060;
+//       }
+//     }
+//   }
+// }
