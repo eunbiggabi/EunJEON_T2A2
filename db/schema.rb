@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_31_165803) do
+ActiveRecord::Schema.define(version: 2021_08_04_055829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,9 +62,22 @@ ActiveRecord::Schema.define(version: 2021_07_31_165803) do
     t.float "original_price"
     t.integer "user_id"
     t.integer "category_id"
-    t.integer "inventory_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "inventory_id", null: false
+    t.index ["inventory_id"], name: "index_products_on_inventory_id"
+  end
+
+  create_table "user_addresses", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "address_line"
+    t.string "city"
+    t.string "postcode"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_addresses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -82,4 +95,6 @@ ActiveRecord::Schema.define(version: 2021_07_31_165803) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "products", "inventories"
+  add_foreign_key "user_addresses", "users"
 end
