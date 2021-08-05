@@ -43,10 +43,27 @@
       <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
     </div>
 
+    <h5>Category</h5>
+    <div class="form-check form-check-line">
+    <%= form.collection_check_boxes :category_id, categories, :id, :name do |c| %>
+      <%= c.label(class: "form-check-label") %>
+      <%= c.check_box(class: "form-check mr-2") %>
+    <% end %>
+  </div>
+
+
     <div class="field">
       <%= form.label :inventory_id %>
-      <%= form.number_field :inventory_id %>
+      <%= form.select :inventory_id, @inventories.map {|i| [i.quantity, i.id]} %>
     </div>
+
+  <h5>inventory</h5>
+  <div class="form-check form-check-line">
+    <%= form.collection_check_boxes :inventory_id, inventories, :id, :quantity do |i| %>
+      <%= i.label(class: "form-check-label") %>
+      <%= i.check_box(class: "form-check mr-2") %>
+    <% end %>
+  </div>
 
     <h5 class='mb-3'>Picture</h5>
     <div class='field'>

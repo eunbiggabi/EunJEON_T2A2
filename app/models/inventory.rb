@@ -1,3 +1,3 @@
 class Inventory < ApplicationRecord
-    # has_one :product
+    has_one :product
 end

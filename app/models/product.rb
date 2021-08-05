@@ -3,7 +3,8 @@ class Product < ApplicationRecord
     has_one_attached :picture
     belongs_to :category
     belongs_to :user
-    # belongs_to :inventory
+    belongs_to :inventory
+    
     
     # validates :name, presence: true, 
     #                     uniqueness: { case_sensitive: false }, 

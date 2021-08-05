@@ -67,7 +67,7 @@ class ProductsController < ApplicationController
 
     def setup_form
       @categories = Category.all
-      # @inventories = Product.inventories.quantity
+      @inventories = Inventory.all
     end
 
     # Only allow a list of trusted parameters through.

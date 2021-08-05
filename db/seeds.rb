@@ -8,10 +8,18 @@
 
 
 categories = ["Elbow", "Knee", "Shoulder", "Back", "Hand", "Leg", "Wrist", "Ankle"]
+inventories = [10, 20, 50, 100, 200]
 
 if Category.count == 0
     categories.each do |category|
         Category.create(name: category)
         puts "Created #{category} category"
+    end
+end
+
+if Inventory.count == 0
+    inventories.each do |inventory|
+        Inventory.create(quantity: inventory)
+        puts "Created #{inventory} category"
     end
 end
