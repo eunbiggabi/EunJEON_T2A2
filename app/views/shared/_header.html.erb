@@ -2,28 +2,24 @@
     <div class="header__container">
         <nav class="navbar">
             <div class="navbar__logo">
-                <a href=""><img src="images/logo.png" alt="bodyhelper-logo" class="navber__logo__img"></a>
+                <a href="/"><img src="images/logo.png" alt="bodyhelper-logo" class="navber__logo__img"></a>
             </div>
 
             <div id="menu" class="navbar__menu">
                 <ul class="navbar__menu">
-                    <li class="navbar__menu__item active" data-link="#home">Home</li>
+                    <a href="/"><li class="navbar__menu__item active" data-link="#home">Home</li></a>
                     <%# <li class="navbar__menu__item" data-link="#about">About</li> %>
-                    <li class="navbar__menu__item" data-link="#skills">Collection</li>
+                    <a href="/products"><li class="navbar__menu__item" data-link="#skills">Collection</li></a>
                 </ul>
             </div>
 
             <div class="navbar__icons">
                 <ul class="navbar__icons">
-                    <%# <a href="/users/sign_out" method="delete"><li class="naver__icon"><button>Sign Out</button></li></a>
-                    <a href="/users/sign_up" method="delete"><li class="naver__icon"><button>New Accout</button></li></a>
-                    <a href="/users/edit"><li class="naver__icon"><button>Profile</button></li></a> %>
-
                     <li class="navbar-text">
                     <% if user_signed_in? %>
                       Logged in as <strong><%= current_user.email %></strong>.
                       <%= "(Admin)" if current_user.admin? %>
-                      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                      <%= link_to 'Change Password', edit_user_registration_path, :class => 'navbar-link' %> |
                       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
                     <% else %>
                       <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
@@ -31,7 +27,9 @@
                     <% end %>
                     </li>
 
-                    <a href="/user_addresses/new"><li class="navbar__icon u"><button><img src="images/user.png" alt="user-image"></button></li></a>
+                    <% if user_signed_in? %>
+                        <a href="/user_addresses/:id/edit"><li class="navbar__icon u"><button><img src="images/user.png" alt="user-image"></button></li></a>
+                    <% end %>
                     <%# <a href="cart.html.erb"><li class="navbar__icon s"><button><img src="images/shopping-cart.png" alt="shopping-cart-image"></button></li></a> %>
                     
                 </ul>

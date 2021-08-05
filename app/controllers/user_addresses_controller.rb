@@ -1,3 +1,5 @@
+require 'user'
+
 class UserAddressesController < ApplicationController
   before_action :set_user_address, only: %i[ show edit update destroy ]
 
@@ -59,7 +61,8 @@ class UserAddressesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user_address
-      @user_address = UserAddress.find(params[:id])
+      @user_address = UserAddress.find(current_user.id)
+      # @user = User.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

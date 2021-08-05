@@ -36,13 +36,13 @@
     <%= form.text_field :postcode %>
   </div>
 
-  <div class="field">
-    <%# <%= current_user_id %> %>
+  <div class="field__remove">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.text_field :user_id, value: current_user.id %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
