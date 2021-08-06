@@ -62,7 +62,7 @@ class UserAddressesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user_address
       @user_address = UserAddress.find(current_user.id)
-      # @user = User.find(params[:id])
+      # @user_address = UserAddress.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

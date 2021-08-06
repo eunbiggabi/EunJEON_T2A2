@@ -23,3 +23,8 @@ if Inventory.count == 0
         puts "Created #{inventory} category"
     end
 end
+
+if User.count == 0 
+    User.create(email: "admin@user.com", password: "admin1", password_confirmation: "admin1", admin: true)
+    User.create(email: "normal@user.com", password: "normal1", password_confirmation: "normal1", admin: false)
+end
