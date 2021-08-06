@@ -28,11 +28,9 @@
                     </li>
 
                     <% if user_signed_in? %>
-                        <%# <a href="/user_addresses/:id/edit"><li class="navbar__icon u"><button><img src="images/user.png" alt="user-image"></button></li></a> %>
-                        <a href="/user_addresses/new"><li class="navbar__icon u"><button>Profile</button></li></a>
-                       
-                            <a href="/user_addresses/:id/edit"><li class="navbar__icon u"><button>Edit Profile</button></li></a>
-                        
+                        <a href="/user_addresses/new"><li class="navbar__icon u"><button><img src="images/user.png" alt="user-image"></button></li></a>
+                        <%# <a href="/user_addresses/new"><li class="navbar__icon u"><button>Profile</button></li></a>
+                        <a href="/user_addresses/:id/edit"><li class="navbar__icon u"><button>Edit Profile</button></li></a> %>
                     <% end %>
                 </ul>
             </div>

@@ -7,7 +7,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .container {
-  padding-top: 10px;
+  padding-top: 70px;
 
   .card__container {
     display: flex;
@@ -76,5 +76,29 @@ h1 {
 }
 
 h2 {
-    margin-top: 60px;
+  margin-top: 60px;
+}
+
+.field__remove {
+  display: none;
+}
+
+.show__container {
+  padding-top: 70px;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+
+    .show__left {
+      padding-left: 12px;
+
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  .show__right {
+    padding: 12px;
+  }
 }
