@@ -102,3 +102,82 @@ h2 {
     padding: 12px;
   }
 }
+
+// form
+
+.form__box {
+  width: 100%;
+  border-top: 1px solid #efefef;
+}
+
+.product__container {
+  width: 310px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.edit_user {
+  width: 310px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 0;
+}
+
+.input__text {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.input__box {
+  width: 310px;
+  height: 40px;
+  font-size: 18px;
+  text-indent: 10px;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.btn__submit {
+  margin: 20px 0;
+  width: 310px;
+  height: 46px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: #3a3a3a;
+
+  @media only screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.btn__submit:hover {
+  background-color: #808080;
+  color: white;
+}
+
+.link__box {
+  width: 100%;
+  padding-top: 20px;
+
+  .link__container {
+    width: 310px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      width: 700px;
+    }
+  }
+}

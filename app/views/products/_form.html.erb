@@ -1,65 +1,68 @@
-<div class="container">
-  <%= form_with(model: product) do |form| %>
-    <% if product.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-        <ul>
-          <% product.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
+<div class="form__box">
+  <div class="product__container">
+    <%= form_with(model: product) do |form| %>
+      <% if product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+            <% product.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name, class: "input__text" %>
+        <%= form.text_field :name, class: "input__box" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :description, class: "input__text" %>
+        <%= form.text_area :description, class: "input__box" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :discount_price, class: "input__text" %>
+        <%= form.text_field :discount_price, class: "input__box" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :original_price, class: "input__text" %>
+        <%= form.text_field :original_price, class: "input__box" %>
+      </div>
+
+      <div class="field__remove">
+        <%= form.label :user_id, class: "input__text" %>
+        <%= form.number_field :user_id, value: 1, class: "input__box" %>
+      </div>
+
+
+      <div class="field">
+        <%= form.label :category_id, class: "input__text" %>
+        <%= form.select :category_id, @categories.map {|c| [c.name, c.id]}, class: "input__box" %>
+      </div>
+
+
+      <div class="field">
+        <%= form.label :inventory_id, class: "input__text" %>
+        <%= form.select :inventory_id, @inventories.map {|i| [i.quantity, i.id]}, class: "input__box" %>
+      </div>
+
+      <h5 class='mb-3'>Picture</h5>
+      <div class='field'>
+        <%= form.label :picture, class: 'form-label' %>
+        <%= form.file_field :picture, accepts: "image/png,image/jpg,image/jpeg", class: 'form-control-file' %>
+        <br />
+        <small class='form-text text-muted'>PNG, JPG and JPEG only</small>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
       </div>
     <% end %>
-
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= form.label :description %>
-      <%= form.text_area :description %>
-    </div>
-
-    <div class="field">
-      <%= form.label :discount_price %>
-      <%= form.text_field :discount_price %>
-    </div>
-
-    <div class="field">
-      <%= form.label :original_price %>
-      <%= form.text_field :original_price %>
-    </div>
-
-    <div class="field__remove">
-      <%= form.label :user_id %>
-      <%= form.number_field :user_id, value: 1 %>
-    </div>
-
-
-    <div class="field">
-      <%= form.label :category_id, class: "form-label mr-1" %>
-      <%= form.select :category_id, @categories.map {|c| [c.name, c.id]} %>
-    </div>
-
-
-    <div class="field">
-      <%= form.label :inventory_id %>
-      <%= form.select :inventory_id, @inventories.map {|i| [i.quantity, i.id]} %>
-    </div>
-
-    <h5 class='mb-3'>Picture</h5>
-    <div class='field'>
-      <%= form.label :picture, class: 'form-label' %>
-      <%= form.file_field :picture, accepts: "image/png,image/jpg,image/jpeg", class: 'form-control-file' %>
-      <br />
-      <small class='form-text text-muted'>PNG, JPG and JPEG only</small>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-  <% end %>
+  </div>
 </div>
 
