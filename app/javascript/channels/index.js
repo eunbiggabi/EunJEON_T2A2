@@ -3,3 +3,12 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+
+
+
+let hamburger = document.getElementById("hamburger-menu")
+
+hamburger.addEventListener("click", () => {
+    let menu = document.getElementById("menu")
+    menu.classList.toggle("hidden")
+})
